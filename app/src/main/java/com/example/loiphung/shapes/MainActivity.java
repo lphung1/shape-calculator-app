@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView shapeText = findViewById(R.id.shapeSelected);
 
         shapeText.setText("No shape selected");
+        calculate.setText("Calculate");
 
 
         calculate.setOnClickListener(new View.OnClickListener() {
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else if(shapeText.getText() == "Circle Selected"){
                     //if values are empty
-                    if (length1.getText().toString().isEmpty() || length2.getText().toString().isEmpty()){
+                    if (length1.getText().toString().isEmpty()){
                         Toast t = Toast.makeText(MainActivity.this, "Please enter missing value", Toast.LENGTH_LONG);
                         t.setGravity(Gravity.CENTER_HORIZONTAL,0,0);
                         t.show();
@@ -134,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 shapeText.setText("Triangle Selected");
                 length1Text.setText("Height: ");
-                length2Text.setText("Width: ");
+                length2Text.setText("Base: ");
                 findViewById(R.id.length2).setEnabled(true);
 
             }
