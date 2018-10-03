@@ -135,6 +135,7 @@ public class MainActivity extends AppCompatActivity {
                 shapeText.setText("Triangle Selected");
                 length1Text.setText("Height: ");
                 length2Text.setText("Width: ");
+                findViewById(R.id.length2).setEnabled(true);
 
             }
         });
@@ -145,6 +146,7 @@ public class MainActivity extends AppCompatActivity {
                 shapeText.setText("Square Selected");
                 length1Text.setText("Length: ");
                 length2Text.setText("Width: ");
+                findViewById(R.id.length2).setEnabled(true);
 
             }
         });
